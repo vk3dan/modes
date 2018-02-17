@@ -1,0 +1,20 @@
+#regexp,modename,desc
+(a|fs)tv,Amateur Television,Fast Scan (ie. Standard PAL/NTSC) television signals on the amateur bands 70cm and above.
+am,Amplitude Modulation,An audio transmission where the signal is modulated by varying the amplitude of the carrier.
+aprs,Automatic Packet Reporting System,"A digital mode used to share information such as positions + telemetry, weather, monitored frequencies etc and for text messaging"
+datv,Digital Amateur Television,"Digital Television, generally using the DVB-T and DVB-S worldwide standards on 70cm and above bands."
+(digital sstv|easypal),Digital Slow Scan Television,"Used to send still images, short video files or any other file, the files can be encoded directly or used in ""Hybrid"" mode which sends a URL to fetch."
+dmr,DMR,A popular digital audio mode used mostly through UHF repeaters.
+(d.*?star|d-?prs),D-Star,"A popular digital audio/data mode used mostly through VHF/UHF repeaters. Supports D-PRS, the D-Star version of APRS when connected to a repeater that supports this feature."
+fm,Frequency Modulation,An audio transmission where the signal is modulated by varying the frequency of the carrier.
+ft8,FT8,"A digital mode using 8-tone AFSK modulation over 50Hz bandwidth, transmitting short, mostly standardized messages over a 13 second transmission. A low-signal mode found in WSJT-X. - The most popular digital mode currently."
+(feld )?hell(schreiber),Hellschreiber,An analog text mode where the character visuals are encoded as audio.
+jt65,JT65,"A digital mode using 65-tone AFSK modulation over 177Hz bandwidth, transmitting short, mostly standardized messages over a 47 second transmission. A low-signal mode found in WSJT-X."
+jt9,JT9,"A digital mode using 9-tone AFSK modulation over 15Hz bandwidth, transmitting short, mostly standardized messages over a 47 second transmission. A low-signal mode found in WSJT-X."
+(cw|morse( ?code)?),Morse code,"The original digital mode. Text transmitted as a series of dits and dahs - short and long tones, either a carrier (CW) or as modulated audio."
+(b|q)?psk(-| )?(31|63|125)?\w+?,Phase Shift Keying,A digital text mode.
+(rtty|deedl\w+),Radio Teletype,A digital mode using mark and space to transmit text. Popular in contests.
+[sul]sb,Single-Sideband,"An AM audio transmission with one sideband (one half of the AM signal) filtered out, and the carrier suppressed. More efficient than AM."
+sstv,Slow Scan Television,"Used to send still images. Similar to weatherfax transmissions used by government agencies, but in color, and with more cat pictures and bikinis."
+(system.*?fusion|c4fm),System Fusion/C4FM,A popular digital audio/data mode used mostly through VHF/UHF repeaters.
+wspr,WSPR,"A digital beacon mode using 4-tone AFSK modulation, transmitting a callsign, grid locator and power output level. Used for propagation testing."
