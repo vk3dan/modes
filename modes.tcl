@@ -5,6 +5,9 @@ bind msg - !mode mode_msg
 set modescsv "modes.csv"
 
 proc mode_msg {nick uhand handle input} {
+  if {[llength $input] == 0} {
+       return "Usage: !mode <modename>\n       If your mode name contains a space, use quotation marks\n   eg: !mode \"digital sstv\" "
+  }
   set mode [sanitize_string [string trim ${input}]]
   set mode [encoding convertfrom utf-8 ${mode}]
   putlog "mode msg: $nick $uhand $handle $mode"
@@ -18,6 +21,9 @@ proc mode_msg {nick uhand handle input} {
 }
 
 proc mode_pub { nick host hand chan text } {
+  if {[llength $text] == 0} {
+       return "Usage: !mode <modename>\n       If your mode name contains a space, use quotation marks\n   eg: !mode \"digital sstv\" "
+  }
   set mode [sanitize_string [string trim ${text}]]
   set mode [encoding convertfrom utf-8 ${mode}]
   putlog "mode pub: $nick $host $hand $chan $rig"
@@ -70,5 +76,5 @@ proc getmode {mode} {
     }
   }
   close $csvfile
-  return "not found; pull requests accepted: http://github.com/vk3dan/modes/"
+  if {[llength $text] > 0} { return "not found; pull requests accepted: https://github.com/vk3dan/modes/" }
 }
