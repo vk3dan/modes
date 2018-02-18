@@ -6,7 +6,7 @@ set modescsv "modes.csv"
 
 proc mode_msg {nick uhand handle input} {
   if {[llength $input] == 0} {
-       return "Usage: !mode <modename>\n       If your mode name contains a space, use quotation marks\n   eg: !mode \"digital sstv\" "
+       return "Usage: !mode <modename> -- If your mode name contains a space, use quotation marks\n   eg: !mode \"digital sstv\" "
   }
   set mode [sanitize_string [string trim ${input}]]
   set mode [encoding convertfrom utf-8 ${mode}]
@@ -22,7 +22,7 @@ proc mode_msg {nick uhand handle input} {
 
 proc mode_pub { nick host hand chan text } {
   if {[llength $text] == 0} {
-       return "Usage: !mode <modename>\n       If your mode name contains a space, use quotation marks\n   eg: !mode \"digital sstv\" "
+       return "Usage: !mode <modename> -- If your mode name contains a space, use quotation marks\n   eg: !mode \"digital sstv\" "
   }
   set mode [sanitize_string [string trim ${text}]]
   set mode [encoding convertfrom utf-8 ${mode}]
